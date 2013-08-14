@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+class Apples {
+	public static void main(String args[]){
+        double fnum, snum;
+        String operation;
+    
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter first number");
+        fnum = input.nextDouble();
+        
+        Scanner op = new Scanner(System.in);
+
+        System.out.println("Enter operation");
+        operation = op.next();
+    
+        Scanner input1 = new Scanner(System.in);
+
+        System.out.println("Enter second number");
+        snum = input.nextDouble();
+
+
+        if (operation.equals("+"))
+        {
+            System.out.println("your answer is" + (fnum + snum));
+        }
+        
+        if  (operation.equals("-"))
+        {
+            System.out.println("your answer is" + (fnum - snum));
+        }
+
+        if (operation.equals("/"))
+        {
+            System.out.println("your answer is" + (fnum / snum));
+        }
+        
+        if (operation.equals("*"))
+        {
+            System.out.println("your answer is" + (fnum * snum));
+        }
+    }
+		
+	}
