@@ -1,45 +1,38 @@
+import javax.swing.JOptionPane;
 import java.util.Scanner;
 
-class Apples {
-	public static void main(String args[]){
-        double fnum, snum;
-        String operation;
-    
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Enter first number");
-        fnum = input.nextDouble();
+public class SimpleGui2{
+    public static void main(String[]args){
         
-        Scanner op = new Scanner(System.in);
-
-        System.out.println("Enter operation");
-        operation = op.next();
-    
-        Scanner input1 = new Scanner(System.in);
-
-        System.out.println("Enter second number");
-        snum = input.nextDouble();
-
-
-        if (operation.equals("+"))
-        {
-            System.out.println("your answer is" + (fnum + snum));
-        }
+                        
+        //Pop up an input box 
+        String a=JOptionPane.showInputDialog(null,"Enter your first number:");
+        double da = Double.parseDouble(a);
         
-        if  (operation.equals("-"))
-        {
-            System.out.println("your answer is" + (fnum - snum));
-        }
-
-        if (operation.equals("/"))
-        {
-            System.out.println("your answer is" + (fnum / snum));
-        }
+        String operation=JOptionPane.showInputDialog(null,"Enter the operation");
         
-        if (operation.equals("*"))
-        {
-            System.out.println("your answer is" + (fnum * snum));
+        //Pop up an input box
+        String b=JOptionPane.showInputDialog(null,"Enter your second number:");
+        double db = Double.parseDouble(b);
+       
+                
+        
+        double answer = da + db;
+        double answer1 = da - db;
+        double answer2 = da * db;
+        double answer3 = da / db;
+        
+        if(operation.equals("+")){
+            JOptionPane.showMessageDialog(null,"your answer is " + answer );
+        }
+        if(operation.equals("-")){
+            JOptionPane.showMessageDialog(null,"your answer is " + answer1 );
+        }
+        if(operation.equals("*")){
+            JOptionPane.showMessageDialog(null,"your answer is " + answer2 );
+        }
+        if(operation.equals("/")){
+            JOptionPane.showMessageDialog(null,"your answer is " + answer3 );
         }
     }
-		
-	}
+}
