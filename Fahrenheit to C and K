@@ -1,0 +1,25 @@
+import javax.swing.JOptionPane;
+
+public class TempConvert2{
+    public static void main(String[]args){
+        
+                        
+        //Pop up an input box 
+        String a=JOptionPane.showInputDialog(null,"Enter degrees Fahrenheit: ");
+        double da = Double.parseDouble(a);
+        
+        String operation=JOptionPane.showInputDialog(null,"What do you want to conver to?");
+               
+        double answerC = da - 32;
+        double answerC1 = answerC * 5;
+        double answerC2 = answerC1 / 9;
+        double answerK = answerC2 + 273;
+        
+        if(operation.equals("Celsius")){
+            JOptionPane.showMessageDialog(null,"That is " + answerC2 + " degrees Celsius");
+        }
+        if(operation.equals("Kelvin")){
+            JOptionPane.showMessageDialog(null,"That is " + answerK + " degrees Kelvin");
+        }
+    }
+}
