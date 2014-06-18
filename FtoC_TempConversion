@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class Temp{
+    public static void main(String[] args){
+        //pop ups the input box
+        String f=JOptionPane.showInputDialog(null,"What degrees in Fahrenheit?");
+        double df = Double.parseDouble(f);
+        
+        //Steps done in different variables so you know how it works
+       double answer = df - 32; 
+       double answer1 = answer * 5;
+       double answer2 = answer1 / 9;
+        
+       //pops up the output box of your answer
+       JOptionPane.showMessageDialog(null, "That equals " + answer2 + "degrees Celsius");
+        
+    }
+}
